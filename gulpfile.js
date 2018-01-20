@@ -3,10 +3,6 @@ var gulp = require('gulp');
 
 // Include Plugins
 var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var notify = require("gulp-notify");
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('gulp-autoprefixer');
 
@@ -16,10 +12,6 @@ var iconfontCss = require('gulp-iconfont-css');
 var runTimestamp = Math.round(Date.now()/1000);
 var fontName = 'icon-family';
 
-// Include Error Handlers (FUTURE)
-//var plumber = require('gulp-plumber');
-//var gutil = require('gulp-util');
-
 
 // --------------
 // Default
@@ -27,8 +19,8 @@ var fontName = 'icon-family';
 // Browser Sync - Refresh on update
 gulp.task('browserSync', function() {
 	browserSync.init({
-		proxy: 'http://gjbottomley.george/',
-        host: 'gjbottomley.george',
+		proxy: 'http://portfolio.george/',
+        host: 'portfolio.george',
         open: 'external'
 	})
 })

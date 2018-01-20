@@ -3,11 +3,9 @@
 $bf: 16;
 
 @mixin bp($bp, $min-max: min-width) {
-	@if ($MQs) == true {
-		$px: $bp;
+	$px: $bp;
 
-		@media(#{$min-max}: #{$px}px) {
-			@content;
-		}
+	@media(#{$min-max}: #{$px}px) {
+		@content;
 	}
 }

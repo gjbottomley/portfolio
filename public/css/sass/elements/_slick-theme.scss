@@ -72,17 +72,16 @@
 .slick-prev:before,
 .slick-next:before
 {
-    @include icomoon-family;
-    font-size: 30px;
-    line-height: 1;
-    opacity: .5;
-    color: $dk-grey;
-	z-index: 3;
+  font-size: 30px;
+  line-height: 1;
+  opacity: .5;
+  color: $black;
+   z-index: 3;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-	@include transition(0.3s ease-out);
-	
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include transition(0.3s ease-out);
+
 	@include bp(500) {
     	font-size: 40px;
 	}
@@ -91,7 +90,7 @@
 .slick-prev
 {
     left: 0px;
-	
+
 	@include bp(1200) {
 		left: -60px;
 	}
@@ -100,7 +99,7 @@
 {
     right: 0px;
     left: auto;
-	
+
 	@include bp(1200) {
 		right: -60px;
 	}
@@ -117,7 +116,7 @@
 .slick-next
 {
     right: -0px;
-	
+
 	@include bp(1200) {
 		right: -60px;
 	}
@@ -126,7 +125,7 @@
 {
     right: auto;
 	left: 0;
-	
+
 	@include bp(1200) {
 		left: -60px;
 	}
@@ -219,7 +218,7 @@
     text-align: center;
 
     opacity: .25;
-    color: $dk-grey;
+    color: $black;
 	@include transition(0.3s ease-out);
 
     -webkit-font-smoothing: antialiased;
@@ -234,11 +233,11 @@
 
 .our-team-slider {
 	margin-top: 30px;
-	
+
 	&.slick-dotted {
 		margin-bottom: 80px;
 	}
-	
+
 	.slick-dots li.slick-active button:before {
 		color: $white;
 		opacity: 1;

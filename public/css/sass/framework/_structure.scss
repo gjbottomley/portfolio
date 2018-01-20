@@ -115,10 +115,6 @@ main {
 	height: 100%;
 	max-width: $container-width;
 	padding: 0 20px;
-
-	@if ($MQs)==false {
-		width: $container-width;
-	}
 }
 
 //Overflow == hidden
@@ -176,7 +172,7 @@ h3 {
 
 hr {
 	border: 0;
-	border-top: 1px solid $dk-grey;
+	border-top: 1px solid $black;
 	margin: 24px 0 8px;
 }
 
