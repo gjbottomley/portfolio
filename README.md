@@ -17,4 +17,4 @@ Compiles any svgs in the icon folder into a usable font for css
 
 Run: ./node_modules/.bin/webpack -d --watch
 
-View this website @ george-bottomley.co.uk
+View this website [Here](http://george-bottomley.co.uk)
