@@ -145,6 +145,19 @@
 		bottom: 220px;
 		top: auto;
 	}
+
+	@media all and(max-width: 1600px) {
+		margin-bottom: -60px;
+	}
+	@media all and(max-width: 1400px) {
+		margin-bottom: -100px;
+	}
+	@media all and(max-width: 1200px) {
+		margin-bottom: -140px;
+	}
+	@media all and(max-width: 800px) {
+		margin-bottom: -160px;
+	}
 }
 
 .layer--five {
