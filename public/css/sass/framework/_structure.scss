@@ -3,32 +3,22 @@
 	STRUCTURE
 
 ----------------------------------------*/
-@import "compass/css3";
 
 // Fonts
 @import "fonts/fonts";
 @import "fonts/icons";
 
-// Config settings and variables
-@import "config/settings";
+// Config
 @import "config/variables";
 
-// fucntions
-
 // Mixins
-@import "mixins/hacks";
+@import "mixins/gradient";
 @import "mixins/media-queries";
 @import "mixins/opacity";
 @import "mixins/prefixes";
-@import "mixins/retina";
-@import "mixins/placeholders";
-@import "mixins/icon-family";
 
 // Animations
-@import "animations/keyframes";
-
-// Extensions
-@import "extensions/img-replace";
+@import "animations/animate";
 
 // Components
 @import "components/header";
@@ -99,12 +89,6 @@ body {
 	&.freeze {
 		overflow: hidden;
 	}
-
-	&.freeze-mobile {
-		@media all and(max-width:767px) {
-			overflow: hidden;
-		}
-	}
 }
 
 img {
@@ -123,47 +107,6 @@ img {
 main {
 	display: block;
 	background-color: $white;
-}
-
-.wrapper {
-	letter-spacing: normal;
-	margin: auto;
-	max-width: $wrapper-width;
-	overflow: hidden;
-	display: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 3;
-	background: $black;
-	@include transition(0.4s ease-out);
-	-webkit-animation-duration: 1s;
-	animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-
-	&.show {
-		@include transition(0.4s ease-out);
-		@include opacity(0.6);
-		-webkit-animation-name: fadeWrapperIn;
-		animation-name: fadeWrapperIn;
-	}
-
-	&:hover {
-		@include opacity(0.4);
-	}
-
-	&.animate-close {
-		-webkit-animation-name: fadeWrapperOut;
-		animation-name: fadeWrapperOut;
-	}
-
-	// moves above navigation
-	&.overlay {
-		z-index: 11;
-	}
 }
 
 .container {
@@ -231,7 +174,6 @@ h3 {
 	}
 }
 
-
 hr {
 	border: 0;
 	border-top: 1px solid $dk-grey;
@@ -260,9 +202,6 @@ b, strong {
 	font-family: $font;
 }
 
-/*
-	Imagery
-----------------*/
 .hide {
 	display: none;
 }

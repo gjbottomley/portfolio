@@ -1,15 +1,7 @@
-/*------------------------------------------------------------------------------------------------------------------------
+// Media Query Mixin
 
-	MEDIA QUERIES
-
-	This mixin can be used for when we are building a responsive website from mobile first.
-
-------------------------------------------------------------------------------------------------------------------------*/
-
-// base font
 $bf: 16;
 
-// Mixin content
 @mixin bp($bp, $min-max: min-width) {
 	@if ($MQs) == true {
 		$px: $bp;
@@ -17,7 +9,5 @@ $bf: 16;
 		@media(#{$min-max}: #{$px}px) {
 			@content;
 		}
-	} @else {
-		@content;
 	}
 }

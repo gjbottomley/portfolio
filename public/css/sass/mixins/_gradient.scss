@@ -8,17 +8,6 @@
 
 --------------------------------------------------------------------------------*/
 
-@mixin webkit() {
-    @media screen and (-webkit-min-device-pixel-ratio:0) {
-        @content;
-    }
-}
-
-@mixin firefox() {
-	@-moz-document url-prefix() {
-		@content;
-	}
-}
 
 @mixin linear-gradient($direction, $color-stops...) {
   // Direction has been omitted and happens to be a color-stop
