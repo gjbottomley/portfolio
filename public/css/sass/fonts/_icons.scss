@@ -1,0 +1,92 @@
+@font-face {
+	font-family: "icon-family";
+	src: url('../fonts/icon-family.eot');
+	src: url('../fonts/icon-family.eot?#iefix') format('eot'),
+		url('../fonts/icon-family.woff2') format('woff2'),
+		url('../fonts/icon-family.woff') format('woff'),
+		url('../fonts/icon-family.ttf') format('truetype'),
+		url('../fonts/icon-family.svg#icon-family') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "icon-family";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == dribbble {
+		$char: "\E001";
+	}
+	@if $filename == facebook {
+		$char: "\E002";
+	}
+	@if $filename == github {
+		$char: "\E003";
+	}
+	@if $filename == instagram {
+		$char: "\E004";
+	}
+	@if $filename == linkedin {
+		$char: "\E005";
+	}
+	@if $filename == spinner {
+		$char: "\E006";
+	}
+	@if $filename == stackoverflow {
+		$char: "\E007";
+	}
+	@if $filename == twitter {
+		$char: "\E008";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-dribbble {
+	@include icon(dribbble);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-github {
+	@include icon(github);
+}
+.icon-instagram {
+	@include icon(instagram);
+}
+.icon-linkedin {
+	@include icon(linkedin);
+}
+.icon-spinner {
+	@include icon(spinner);
+}
+.icon-stackoverflow {
+	@include icon(stackoverflow);
+}
+.icon-twitter {
+	@include icon(twitter);
+}

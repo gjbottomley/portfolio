@@ -1,0 +1,252 @@
+/*
+*	FORM
+*	By George Bottomley
+*
+*	all form styling is here
+*
+*	[1] Form
+*	[2] Form Group
+*	[3] Form Label
+*	[4] Form Input
+*	[5] Misc (errors, success)
+*	[6] Form Sections
+*
+*======================================*/
+$input-color: $blue;
+$input-bg: $white;
+$input-size: $base-font-size;
+$input-padding: 0 10px;
+$input-margin: 5px 0;
+$form-color: #95c4f0;
+$form-color-current: #3f91dd;
+$form-color-alt: #ffe68d;
+$form-color-alt-current: #ffc600;
+$form-color-notification: #9295a5;
+
+
+/*--[1] Form --*/
+
+// Form = Default
+.form {
+	flex: none;
+
+	// Target everything inside form
+	* {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		font-family: $base-font-family;
+
+		// Remove all focus
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+
+@-moz-document url-prefix() {
+	select, select:-moz-focusring, select::-moz-focus-inner {
+		color: transparent !important;
+		text-shadow: 0 0 0 #000 !important;
+		background-image: none !important;
+		border:0;
+	}
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px $white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: $black;
+		border-color: $blue;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 50px $white inset ,0 0 0 50px $white inset;
+    -webkit-text-fill-color: $black;
+		border-color: $blue;
+}
+
+
+/*--[2] Form Group --*/
+.form-group {
+	padding: 0;
+	position: relative;
+	margin: $input-margin;
+	text-align: left;
+	margin-top: 20px;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	&.disabled {
+		.form__input {
+			color: #666;
+			background: #ccc;
+			cursor: default;
+			pointer-events: none;
+		}
+
+		&:after {
+			color: #b0b0b0;
+		}
+	}
+
+	&.error {
+		.form__label {
+			display: block;
+		}
+
+		.form__input {
+			border: 1px solid $error;
+
+			&:valid {
+
+			}
+		}
+	}
+}
+
+.form-group--submit {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 0;
+
+	&:before {
+		position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    z-index: 2;
+    font-size: 24px;
+    height: 40px;
+    line-height: 40px;
+
+		// Animate
+	  animation-duration: 0.8s;
+	  animation-fill-mode: both;
+		animation-timing-function: linear;
+	  animation-iteration-count: infinite;
+		animation-name: loadSpin;
+	}
+
+	.loading & {
+		@include icon(spinner)
+	}
+}
+
+.form__label {
+	display: block;
+	// Font
+	color: rgba($blue, 0.4);
+	font-family: $font;
+	font-size: $input-size;
+	line-height: 40px;
+	position: absolute;
+	top: 0;
+	left: 10px;
+	pointer-events: none;
+	display: none;
+}
+
+.form__input {
+	position: relative;
+	display: block;
+	border: 0; // border reset
+	background: $white;
+	resize: none; // turn off resize
+	border-bottom: 2px solid rgba($blue, 0.2);
+
+	// Sizing
+	width: 100%;
+	max-height: 182px;
+	min-height: 40px;
+	padding: $input-padding;
+
+	// Font
+	font-size: $input-size;
+	color: $input-color;
+	@include transition(0.4s ease-out);
+
+	&:focus,
+	&:active {
+		outline: 0;
+		border-color: $blue;
+	}
+
+	&:focus,
+	&:active,
+	&:invalid {
+		z-index: 2;
+		& + .form__label {
+			display: none;
+		}
+	}
+
+	&:valid {
+		border-color: $blue;
+	}
+}
+
+.form__input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba($blue,0.4);
+}
+.form__input::-moz-placeholder { /* Firefox 19+ */
+  color: rgba($blue,0.4);
+}
+.form__input:-ms-input-placeholder { /* IE 10+ */
+  color: rgba($blue,0.4);
+}
+.form__input:-moz-placeholder { /* Firefox 18- */
+  color: rgba($blue,0.4);
+}
+
+// form input = textarea
+.form__input--textarea {
+	overflow: auto;
+	padding: 10px;
+
+	@include bp($mobile-break) {
+		height: 100px;
+		max-height: 100%;
+	}
+}
+
+.form__submit {
+	height: 40px;
+	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+	padding: 0 30px;
+	width: 100%;
+	max-width: 180px;
+	background: $white;
+	color: $blue;
+	@include border-radius(20px);
+	font-size: $base-font-size;
+	font-weight: 600;
+	@include transform(scale(1));
+	@include box-shadow(0 1px 0px 0px rgba($black, 0));
+	@include transition(0.3s ease-out);
+	cursor: pointer;
+	border: 2px solid $blue;
+
+	&:hover {
+		color: $white;
+		background: $blue;
+	}
+
+	.loading & {
+		color: $blue;
+		background: $blue;
+	}
+}
+
+/*--[5] Misc --*/
+
+// Form Success
+.form__success {
+	flex: none;
+	text-align: center;
+}

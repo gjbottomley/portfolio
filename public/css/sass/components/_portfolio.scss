@@ -1,0 +1,137 @@
+// multi
+
+.pane-wrapper {
+  margin: 0 -20px;
+  font-size: 0;
+  margin-top: 40px;
+
+  & + .pane-wrapper {
+    margin-top: 0px;
+  }
+}
+
+.pane {
+  padding: 20px;
+  display: block;
+  font-size: $base-font-size;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  @include opacity(0);
+  @include transition(0.4s opacity ease-out);
+
+  @include bp(500) {
+    max-width: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  @include bp($mobile-break) {
+    width: 33.33%;
+  }
+
+  .visible & {
+    @include opacity(1);
+  }
+}
+
+.pane-inner {
+  display: block;
+  background: $lt-purple;
+  width: 100%;
+  padding-top: 100%;
+  @include border-radius(10px);
+  position: relative;
+  overflow: hidden;
+  @include box-shadow(0 0 10px 6px rgba($black,0.1));
+
+  &:after {
+    content: '';
+    position: absolute;
+    background: $green;
+    top: 110%;
+    width: 300%;
+    height: 300%;
+    z-index: 2;
+    @include opacity(0);
+    @include transform(rotate(-15deg));
+    @include transition(0.4s ease-out);
+  }
+
+  &:hover {
+
+    &:after {
+      top: -70%;
+      @include opacity(0.6);
+      @include transform(rotate(-35deg));
+    }
+
+    .pane__img {
+      @include opacity(0.6);
+      @include transform(scale(1.1));
+    }
+
+    .pane-content {
+      @include opacity(1);
+    }
+  }
+
+  * {
+    cursor: pointer;
+  }
+
+}
+
+.pane__img {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include opacity(1);
+  @include transition(0.3s ease-out);
+}
+
+.pane-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  padding: 20px;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include opacity(0);
+  @include transition(0.5s ease-out);
+}
+
+.pane-content__title {
+  color: $white;
+  font-family: $font;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 0;
+  width: 100%;
+}
+
+.pane-content__button {
+  background: $white;
+  color: $purple;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  max-width: 160px;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: $font;
+  @include border-radius(20px);
+}

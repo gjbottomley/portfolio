@@ -1,0 +1,45 @@
+.tile-wrapper {
+  position: relative;
+
+  .circle {
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    z-index: 1;
+
+    margin-top: -80px;
+    margin-right: -80px;
+  }
+}
+
+.tile {
+  background: $white;
+  @include border-radius(10px);
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+
+  @include bp($mobile-break) {
+    padding: 40px;
+
+    // Flex
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  @media all and(max-width:$mobile-break-max) {
+    height: auto !important;
+  }
+
+  .grid & {
+    margin-top: 40px;
+
+    @include bp($mobile-break) {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.grid-row {
+	// Sizing
+	margin: 0 -15px;
+	// Font
+	font-size: 0; // Reset font for inline-block
+}
+
+// Grid row = middle (vertical align)
+.grid-row--middle {
+	.grid {
+		//Position
+		vertical-align: middle;
+	}
+}
+
+.grid {
+	//Position
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	// Sizing
+	padding: 0 15px;
+	width: 100%;
+	// Font
+	font-size: $base-font-size;
+
+	&.left {
+		// Font
+		text-align: left;
+	}
+
+	&.center {
+		// Font
+		text-align: center;
+	}
+
+	&.right {
+		@include bp($mobile-break) {
+			// Font
+			text-align: right;
+		}
+	}
+
+}
+
+.grid--1 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 8.33333333%;
+	}
+}
+
+.grid--2 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 16.66666667%;
+	}
+}
+
+.grid--25 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 33.333333%;
+	}
+
+	@include bp(1024) {
+		width: 25%;
+	}
+}
+
+.grid--3 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 25%;
+	}
+}
+
+.grid--4 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 33.33333333%;
+	}
+}
+
+.grid--5 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 41.66666667%;
+	}
+}
+
+.grid--6 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 50%;
+	}
+}
+
+.grid--7 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 58.33333333%;
+	}
+}
+
+.grid--8 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 66.66666667%;
+	}
+}
+
+.grid--9 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 75%;
+	}
+}
+
+.grid--10 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 83.33333333%;
+	}
+}
+
+.grid--11 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 91.66666667%;
+	}
+}
+
+.grid--12 {
+	@include bp($mobile-break) {
+		// Sizing
+		width: 100%;
+	}
+}

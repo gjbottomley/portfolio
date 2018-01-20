@@ -1,0 +1,154 @@
+.modal-wrapper {
+//positioning
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 10;
+background: rgba($black,0.6);
+line-height: 100vh;
+
+	&.animate {
+		-webkit-animation-duration: 0.5s;
+		animation-duration: 0.5s;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+
+		&.open {
+			-webkit-animation-name: ModalOut;
+			animation-name: ModalOut;
+		}
+
+		&.closed {
+			-webkit-animation-name: ModalIn;
+			animation-name: ModalIn;
+		}
+	}
+}
+
+@-webkit-keyframes ModalOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ModalOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes ModalIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ModalIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.modal {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	z-index: 11;
+	width: 100%;
+	line-height: 1.4;
+	overflow: hidden;
+}
+
+.modal-inner {
+	position: relative;
+	max-width: 600px;
+	display: block;
+	line-height: 1.4;
+	margin: 0 auto;
+	height: auto;
+	overflow: hidden;
+
+	margin: 0 auto;
+	background: rgba(#152431, 0.75);
+	padding: 40px 60px 60px;
+	@include transition(0.3s linear);
+
+}
+
+.modal-inner__title {
+	width: 100%;
+	background: rgba(#152431, 0.6);
+	color: $white;
+	display: block;
+	padding: 30px;
+	text-align: center;
+
+	h1 {
+		margin: 0;
+		position: relative;
+		padding-bottom: 10px;
+		&:after {
+			content:'';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			width: 80px;
+			margin-left: -40px;
+			height: 2px;
+			background: $red;
+		}
+	}
+}
+
+.modal-inner__close {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background: $red;
+	@include transform(scale(1));
+	@include transition(0.2s linear);
+
+	&:active {
+			@include transform(scale(1.06));
+	}
+
+	&:before {
+		content: '\e918';
+		color: $white;
+		display: block;
+		/* use !important to prevent issues with browser extensions that change fonts */
+		font-family: 'icomoon' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}

@@ -1,0 +1,284 @@
+/*----------------------------------------
+
+	STRUCTURE
+
+----------------------------------------*/
+@import "compass/css3";
+
+// Fonts
+@import "fonts/fonts";
+@import "fonts/icons";
+
+// Config settings and variables
+@import "config/settings";
+@import "config/variables";
+
+// fucntions
+
+// Mixins
+@import "mixins/hacks";
+@import "mixins/media-queries";
+@import "mixins/opacity";
+@import "mixins/prefixes";
+@import "mixins/retina";
+@import "mixins/placeholders";
+@import "mixins/icon-family";
+
+// Animations
+@import "animations/keyframes";
+
+// Extensions
+@import "extensions/img-replace";
+
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/portfolio";
+
+// Elements
+@import "elements/grid";
+@import "elements/hamburgers";
+@import "elements/form";
+@import "elements/bars";
+@import "elements/content";
+@import "elements/buttons";
+@import "elements/preloader";
+@import "elements/slick";
+@import "elements/slick-theme";
+@import "elements/map";
+@import "elements/modal";
+@import "elements/tile";
+@import "elements/social";
+
+/*
+	Global
+---------------*/
+* {
+	@include box-sizing(border-box);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+html,
+body {
+	min-width: 320px;
+	zoom: 1;
+}
+
+// https://www.w3schools.com/html/html5_browsers.asp  = html5 support
+header, section, footer, aside, nav, main, article, figure {
+	display: block;
+}
+
+iframe {
+	border: 0;
+}
+
+::selection {
+  background: $pale-pink; /* WebKit/Blink Browsers */
+	color: $white;
+}
+::-moz-selection {
+  background: $pale-pink; /* Gecko Browsers */
+	color: $white;
+}
+
+/*
+	Body
+----------------*/
+
+body {
+	background: #0C001E;
+	font: #{($base-font-size / 16px) * 1em} / #{$line-height-ratio} $base-font-family, arial;
+	margin: 0;
+	font-family: $font;
+
+	-webkit-text-size-adjust: none; // stops the text from becoming bigger on orientation on iPhone / iPad devices
+	-webkit-font-smoothing: antialiased; // makes the font smooth on webkit devices
+	-moz-osx-font-smoothing: grayscale;
+
+	&.freeze {
+		overflow: hidden;
+	}
+
+	&.freeze-mobile {
+		@media all and(max-width:767px) {
+			overflow: hidden;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+	border: none;
+	height: auto;
+}
+
+.content-wrapper {
+	overflow: hidden;
+}
+
+/*
+	Wrappers / Containers
+----------------------------*/
+main {
+	display: block;
+	background-color: $white;
+}
+
+.wrapper {
+	letter-spacing: normal;
+	margin: auto;
+	max-width: $wrapper-width;
+	overflow: hidden;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	background: $black;
+	@include transition(0.4s ease-out);
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+
+	&.show {
+		@include transition(0.4s ease-out);
+		@include opacity(0.6);
+		-webkit-animation-name: fadeWrapperIn;
+		animation-name: fadeWrapperIn;
+	}
+
+	&:hover {
+		@include opacity(0.4);
+	}
+
+	&.animate-close {
+		-webkit-animation-name: fadeWrapperOut;
+		animation-name: fadeWrapperOut;
+	}
+
+	// moves above navigation
+	&.overlay {
+		z-index: 11;
+	}
+}
+
+.container {
+	margin: auto;
+	position: relative;
+	height: 100%;
+	max-width: $container-width;
+	padding: 0 20px;
+
+	@if ($MQs)==false {
+		width: $container-width;
+	}
+}
+
+//Overflow == hidden
+.overflow {
+	overflow: hidden;
+}
+
+//Overflow == hidden
+.relative {
+	position: relative;
+}
+
+// Text align center
+.center {
+	@include bp(500) {
+		text-align: center;
+	}
+}
+
+/*
+	Typography
+-------------------*/
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+/*
+	Letter spacing
+----------------*/
+
+h1 {
+	font-size: 18px;
+
+	@include bp($mobile-break) {
+		font-size: 21px;
+	}
+}
+
+h2 {
+	font-size: 16px;
+
+	@include bp($mobile-break) {
+		font-size: 18px;
+	}
+}
+
+h3 {
+	font-size: 15px;
+
+	@include bp($mobile-break) {
+		font-size: 16px;
+	}
+}
+
+
+hr {
+	border: 0;
+	border-top: 1px solid $dk-grey;
+	margin: 24px 0 8px;
+}
+
+a {
+	text-decoration: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+p {
+	font-size: 15px;
+	font-family: $base-font-family;
+
+	@include bp($mobile-break) {
+		font-size: 16px;
+	}
+}
+
+b, strong {
+	font-weight: 600;
+	font-family: $font;
+}
+
+/*
+	Imagery
+----------------*/
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.mobile-hide {
+	@media all and(max-width:$mobile-break-max) {
+		display: none;
+	}
+}
+
+.desktop-hide {
+	@include bp($mobile-break) {
+		display: none;
+	}
+}

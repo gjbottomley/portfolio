@@ -1,0 +1,60 @@
+.button-wrapper {
+  display: block;
+  margin: 0 -30px;
+  text-align: center;
+}
+
+.button {
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  padding: 0 30px;
+  background: $white;
+  color: $purple;
+  @include border-radius(20px);
+  font-size: $base-font-size;
+  font-weight: 600;
+  @include transform(scale(1));
+  @include box-shadow(0 1px 0px 0px rgba($black, 0));
+  @include transition(0.1s ease-out);
+
+  &:active {
+    @include transform(scale(1.05));
+    @include box-shadow(0 1px 10px 4px rgba($black, 0.2));
+  }
+}
+
+.button--green {
+  background: $green;
+  color: $white;
+
+  &:hover {
+    background: lighten($green, 5%);
+  }
+}
+
+.button--space {
+  margin: 40px 0 0;
+}
+
+
+.link {
+  display: inline-block;
+  color: $white;
+  font-size: 18px;
+  font-weight: 600;
+
+
+  @include transition(0.3s ease-out);
+}
+
+.link--contact {
+  margin-top: 15px;
+
+  &:hover {
+    color: $salmon;
+    text-decoration: underline;
+    text-decoration-color: rgba($salmon,0.4);
+  }
+}
