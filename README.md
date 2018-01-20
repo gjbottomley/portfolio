@@ -1,9 +1,9 @@
-# portfolio
+# Portfolio Project
 My Portfolio website
 
 Packages: Gulp, Webpack, Laravel
 
-###Commands###
+### Commands
 
 **Gulp**
 
