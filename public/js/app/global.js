@@ -8,6 +8,16 @@ $( document ).ready(function() {
   var windowHeight = $(window).height();
   $('#js-banner').css('height', windowHeight);
 
+$(document).scroll(function() {
+  var hamburger = $('.js-hamburger');
+
+  if ($(document).scrollTop() >= windowHeight - 140) {
+    hamburger.addClass('body');
+  } else {
+    hamburger.removeClass('body');
+  }
+});
+
   console.log(windowHeight);
 
   var path = '/images/GB-Logo.gif';

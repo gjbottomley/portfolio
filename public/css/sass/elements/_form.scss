@@ -225,7 +225,7 @@ input:-webkit-autofill:focus {
 	color: $blue;
 	@include border-radius(20px);
 	font-size: $base-font-size;
-	font-weight: 600;
+	font-family: $font-semi;
 	@include transform(scale(1));
 	@include box-shadow(0 1px 0px 0px rgba($black, 0));
 	@include transition(0.3s ease-out);
