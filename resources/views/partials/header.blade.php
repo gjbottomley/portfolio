@@ -1,8 +1,11 @@
-<section class="bar bar--header">
+<section class="bar bar--header" id="js-banner">
+  <div class="preload-wrapper" id="js-loader"></div>
   <div class="container">
     <div class="content content--header content--center">
       <div class="content-wrap animated fadeInUp">
-        <img src="{{ url('images/gb.png') }}" width="168" height="82" alt="GB" class="content__img content__img--logo">
+        <div class="gif-wrapper">
+          <img src="{{ url('images/GB-Logo.gif') }}" width="188" height="102" alt="GB" class="content__img content__img--logo" id="js-logo">
+        </div>
         <h1 class="content__title content__title--main">
           <span class="job__title">Frontend Developer</span>
           <br>

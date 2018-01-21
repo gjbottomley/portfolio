@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 var s = skrollr.init();
 
 $('#js-wrapper').on('click', function (e) {

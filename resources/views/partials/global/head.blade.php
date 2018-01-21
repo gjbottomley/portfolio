@@ -36,7 +36,6 @@
 <!-- Google Analytics -->
 
 <!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 <link href="{{ url('css/layout.css') }}" rel="stylesheet" type="text/css">
 
 <script src="{{ url('js/app/utils/modernizr.min.js') }}" type="text/javascript"></script>

@@ -81,6 +81,7 @@ body {
 	font: #{($base-font-size / 16px) * 1em} / #{$line-height-ratio} $base-font-family, arial;
 	margin: 0;
 	font-family: $font;
+	position: relative;
 
 	-webkit-text-size-adjust: none; // stops the text from becoming bigger on orientation on iPhone / iPad devices
 	-webkit-font-smoothing: antialiased; // makes the font smooth on webkit devices

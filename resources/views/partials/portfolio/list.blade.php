@@ -9,7 +9,7 @@
 <div class="pane-wrapper hide" id="js-portfolio-all">
   <article class="pane">
     <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('https://cdn.dribbble.com/users/4605/screenshots/1757843/snap.png');"></div>
+      <div class="pane__img" style="background-image: url('');"></div>
       <div class="pane-content">
         <h3 class="pane-content__title">Juice-E-Vaporium</h3>
         <span class="pane-content__button">View website</span>
@@ -18,7 +18,7 @@
   </article>
   <article class="pane">
     <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('https://cdn.dribbble.com/users/25514/screenshots/3139404/financial_landing_wip.png');"></div>
+      <div class="pane__img" style="background-image: url('');"></div>
       <div class="pane-content">
         <h3 class="pane-content__title">Juice-E-Vaporium</h3>
         <span class="pane-content__button">View website</span>
@@ -27,7 +27,7 @@
   </article>
   <article class="pane">
     <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('https://cdn.dribbble.com/users/4605/screenshots/1757843/snap.png');"></div>
+      <div class="pane__img" style="background-image: url('');"></div>
       <div class="pane-content">
         <h3 class="pane-content__title">Juice-E-Vaporium</h3>
         <span class="pane-content__button">View website</span>
@@ -36,7 +36,7 @@
   </article>
   <article class="pane">
     <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('https://cdn.dribbble.com/users/4605/screenshots/1757843/snap.png');"></div>
+      <div class="pane__img" style="background-image: url('');"></div>
       <div class="pane-content">
         <h3 class="pane-content__title">Juice-E-Vaporium</h3>
         <span class="pane-content__button">View website</span>
@@ -45,7 +45,7 @@
   </article>
   <article class="pane">
     <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('https://cdn.dribbble.com/users/25514/screenshots/3139404/financial_landing_wip.png');"></div>
+      <div class="pane__img" style="background-image: url('');"></div>
       <div class="pane-content">
         <h3 class="pane-content__title">Juice-E-Vaporium</h3>
         <span class="pane-content__button">View website</span>
@@ -54,7 +54,7 @@
   </article>
   <article class="pane">
     <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('https://cdn.dribbble.com/users/4605/screenshots/1757843/snap.png');"></div>
+      <div class="pane__img" style="background-image: url('');"></div>
       <div class="pane-content">
         <h3 class="pane-content__title">Juice-E-Vaporium</h3>
         <span class="pane-content__button">View website</span>
