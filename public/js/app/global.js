@@ -18,7 +18,7 @@ $( document ).ready(function() {
 
     $("#js-logo").attr("src", path);
 
-  }, 10000);
+  }, 15000);
 
   $(".form").submit(function(e) {
     var element = $(e.target),

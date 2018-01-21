@@ -187,15 +187,6 @@
 // Content img = scale
 .content__img {}
 
-.content__img--logo {
-	margin-bottom: 25px;
-
-	@media all and (max-width: 600px) {
-		width: 84px;
-		height: 41px;
-	}
-}
-
 .content__img--portfolio-c {
 	position: absolute;
 	top: -60px;
@@ -211,7 +202,7 @@
 	height: 70px;
 	margin-bottom: 30px;
 
-	.content__img--logo {
+	img {
 		margin-top: -60px;
 	}
 }
