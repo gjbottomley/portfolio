@@ -13,7 +13,6 @@
     <div class="content-wrapper">
       @include ('partials.navigation')
 			<main>
-        @include ('partials.header')
 				@yield('content')
 			</main>
 			@include('partials/footer')

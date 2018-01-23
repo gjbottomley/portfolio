@@ -183,3 +183,7 @@
 	z-index: 60;
 	@include linear-gradient(to bottom, #363654, #1D1233 83%, #0C001E);
 }
+
+.bar--white {
+	background: $white;
+}

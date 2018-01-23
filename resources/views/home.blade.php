@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
 @section('content')
+
+  @include ('partials.header')
   <div class="bar bar--gradient">
     <section class="content" id="js-introduction">
       <div class="container">

@@ -17,3 +17,6 @@ Route::get('/', function () {
 
 Route::get('/', 'ContactController@show');
 Route::post('/',  'ContactController@mailToAdmin');
+
+
+Route::get('/portfolio/hook-and-partners', 'PortfolioController@hook');
