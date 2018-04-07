@@ -1,27 +1,25 @@
-@extends('layouts.master')
+@extends('layouts.portfolio')
 
 @section('content')
-  <div class="bar bar--gradient">
-    <section class="container">
-      <div class="content center">
-          <img src="{{ url('images/GB-Logo.png') }}" width="120" height="70" alt="GB" class="content__img">
+  <section class="container container--portfolio">
+    <div class="site-wrapper">
+      <img src="{{ url('images/portfolio/hook/hook-website.jpg') }}">
+    </div>
+    <div class="content center">
+      <div class="content__text content__text--portfolio">
+        <ul>
+          <li><b>Job Role:</b> Lead Frontend Developer</li>
+          <li><b>Website Description:</b> Lawyers &amp; Solicitors</li>
+        </ul>
+        <p class="small">This website was built while employed at <a href="https://www.stormcreative.co.uk/" title="Storm Creative" target="_blank" class="link link--storm">Storm Creative</a> I don't claim this to be solely my work.</p>
       </div>
-      <div class="monitor-wrapper">
-        <div class="monitor-inner animated slideInRight">
-          <div class="monitor-overlay"></div>
-          <div class="site-wrapper animated zoomIn">
-            <img src="{{ url('images/portfolio/hook/hook-website.jpg') }}">
-          </div>
-        </div>
-        <div class="monitor-stand monitor-inner animated slideInUp">
-          <div class="monitor-stand__brand"></div>
-        </div>
-        <div class="monitor-stand__platform animated bounceInDown"></div>
+      <div class="button-wrapper">
+        <a href="https://www.hookandpartners.co.uk/" target="_blank" class="button button--blue button--space" title="View Hook &amp; Partners">View Hook &amp; Partners</a>
       </div>
-      <div class="content center">
-        <div class="button-wrapper">
-          <a href="https://www.hookandpartners.co.uk/" target="_blank" class="button button--green" titlw="View Hook &amp; Partners">View Hook &amp; Partners</a>
-        </div>
-      </div>
-  </div>
+    </div>
+    <div class="content">
+      <h2 class="content__title content__title--blue">See more of my portfolio</h2>
+      @include ('partials.portfolio.list')
+    </div>
+  </section>
 @endsection

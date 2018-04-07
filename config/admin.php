@@ -1,8 +1,10 @@
 <?php
 
-return [
+$siteVariables = [
 
-    'email' => 'george-bottomley@hotmail.com',
+    'email' => 'me@george-bottomley.co.uk',
     'name' => 'George Bottomley',
 
 ];
+
+return $siteVariables;

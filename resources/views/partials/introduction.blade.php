@@ -1,6 +1,10 @@
 <div class="content-wrap content-wrap--large center">
   <h2 class="content__title content__title--pink">Introduction</h2>
   <div class="content__text">
-    <p>My Career and goals: From a young age I'd always wanted to be a web designer, as iv progressed in my career Iv followed the route of a Frontend developer this allows me to still have creative input and put my mark on things. I'm extremely passionate about everything I produce and always put in the extra effort. I want to be the best at what I do.</p>
+    <p>New Zealand bound! from June 2018 I will be living in Queenstown, New Zealand. I currently have over 6 years experience In the Industry as a developer, I am incredibly passionate about my work and am always looking for new ways to improve myself.</p>
+
+    <p>Most recently I have been working at <a href="http://stormcreative.co.uk/" title="Storm Creative" target="_blank" class="link link--storm">Storm Creative</a> as the Lead Frontend Developer, I am incredibly proud of all the work I produced while working there and feel that the experience of working at a high-pressure agency gives me an edge over other developers.</p>
+    <p>I am currently looking for work!</p>
   </div>
+  <a href="{{ url('#contact') }}" class="button button--space">Get in touch</a>
 </div>

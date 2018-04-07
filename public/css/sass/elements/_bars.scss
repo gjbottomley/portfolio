@@ -4,6 +4,17 @@
 	position: relative;
 	background: $white;
 	background-size: cover;
+
+	&.offset {
+		padding-bottom: 40px;
+		position: static;
+
+		& + * {
+			position: relative;
+			top: -40px;
+			margin-bottom: -40px;
+		}
+	}
 }
 
 .bar--header {
@@ -24,8 +35,10 @@
 	left: -2%;
 	z-index: 50;
 	width: 104%;
+	height: 100%;
 	background-repeat: no-repeat;
 	background-position: left bottom;
+	background-image: url('../images/header-layer-1.svg');
 
 	@include bp(600) {
 		background-position: center bottom;
@@ -171,9 +184,9 @@
 	top: 240px;
 	right: 0px;
 	z-index: 40;
-	width: 90px;
-	height: 430px;
-	background-image: url('../images/header-layer-6.png');
+	width: 25px;
+	height: 450px;
+	background-image: url('../images/header-layer-6-2.png');
 	background-repeat: no-repeat;
 	background-position: center bottom;
 }
@@ -182,6 +195,10 @@
 .bar--gradient {
 	z-index: 60;
 	@include linear-gradient(to bottom, #363654, #1D1233 83%, #0C001E);
+}
+.bar--gradient-green {
+	z-index: 60;
+	@include linear-gradient(to bottom, #00f791, #3cbe8c);
 }
 
 .bar--white {

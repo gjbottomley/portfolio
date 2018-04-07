@@ -2,13 +2,13 @@
   <div class="grid grid--5">
     <h2 class="content__title content__title--contact ">Get in touch</h2>
     <div class="content__text content__text--contact">
-      <p>If you need to discuss a project, want to see some more work or just fancy a chat; use the contact form or use my details below&hellip;</p>
+      <p>If you have any questions about any of my work please contact me using the contact form or the details below&hellip;</p>
     </div>
     <div>
-      <a href="mailto:george-bottomley@hotmail.co.uk" title="Email me" class="link link--contact">george-bottomley@hotmail.co.uk</a>
+      <a href="mailto:george-bottomley@hotmail.co.uk" title="Email me" class="link link--contact">me@george-bottomley.co.nz</a>
     </div>
     <div>
-      <a href="tel:07714571882" title="Email me" class="link link--contact">07714571882</a>
+      <a href="tel:+44714571882" title="Email me" class="link link--contact">(+44) 07714 571 882</a>
     </div>
     <div class="social-wrapper mobile-hide">
       @include ('partials/social')

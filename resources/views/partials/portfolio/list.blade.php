@@ -1,62 +1,55 @@
-<img src="{{ url('images/portfolio-circle.png') }}" width="200" height="200" alt="" class="content__img content__img--portfolio-c">
-<div class="content-wrap center">
-  <h2 class="content__title content__title--green">Portfolio</h2>
-  <div class="content__text">
-    <p>Below are a few of my personal projects. For obvious reasons, I can’t display a lot of my work since it’s through other companies. If you’d like to see any of these, they are a message away.</p>
-  </div>
-</div>
 @include ('partials.portfolio.featured')
 <div class="pane-wrapper hide" id="js-portfolio-all">
   <article class="pane">
-    <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('');"></div>
+    <a href="{{ url('portfolio/reliable') }}" title="View Reliable Removals" class="pane-inner">
+      <div class="pane__img" style="background-image: url('{{ url('images/portfolio/reliable/thumb.jpg') }}');"></div>
       <div class="pane-content">
-        <h3 class="pane-content__title">Juice-E-Vaporium</h3>
+        <h3 class="pane-content__title">Reliable Removals</h3>
         <span class="pane-content__button">View website</span>
       </div>
     </a>
   </article>
   <article class="pane">
-    <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('');"></div>
+    <a href="{{ url('portfolio/royals') }}" title="View Royals Shopping Centre" class="pane-inner">
+      <div class="pane__img" style="background-image: url('{{ url('images/portfolio/royals/thumb.jpg') }}');"></div>
       <div class="pane-content">
-        <h3 class="pane-content__title">Juice-E-Vaporium</h3>
+        <h3 class="pane-content__title">Royals Shopping Centre</h3>
         <span class="pane-content__button">View website</span>
       </div>
     </a>
   </article>
   <article class="pane">
-    <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('');"></div>
+    <a href="{{ url('portfolio/holmes') }}" title="View Holmes Holmes" class="pane-inner">
+      <div class="pane__img" style="background-image: url('{{ url('images/portfolio/holmes/thumb.jpg') }}');"></div>
       <div class="pane-content">
-        <h3 class="pane-content__title">Juice-E-Vaporium</h3>
+        <h3 class="pane-content__title">Homles Homles</h3>
         <span class="pane-content__button">View website</span>
       </div>
     </a>
   </article>
   <article class="pane">
-    <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('');"></div>
+    <a href="{{ url('portfolio/method') }}" title="View Method IT" class="pane-inner">
+      <div class="pane__img" style="background-image: url('{{ url('images/portfolio/method/thumb.jpg') }}');"></div>
       <div class="pane-content">
-        <h3 class="pane-content__title">Juice-E-Vaporium</h3>
+        <h3 class="pane-content__title">Method IT</h3>
         <span class="pane-content__button">View website</span>
       </div>
     </a>
   </article>
   <article class="pane">
-    <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('');"></div>
+    <a href="{{ url('portfolio/griffin') }}" title="View Griffin Residential" class="pane-inner">
+      <div class="pane__img" style="background-image: url('{{ url('images/portfolio/griffin/thumb.jpg') }}');"></div>
       <div class="pane-content">
-        <h3 class="pane-content__title">Juice-E-Vaporium</h3>
+        <h3 class="pane-content__title">Griffin Residential</h3>
         <span class="pane-content__button">View website</span>
       </div>
     </a>
   </article>
   <article class="pane">
-    <a href="#" title="" class="pane-inner">
-      <div class="pane__img" style="background-image: url('');"></div>
+    <a href="{{ url('portfolio/hook-and-partners') }}" title="View Hook &amp; Partners" class="pane-inner">
+      <div class="pane__img" style="background-image: url('{{ url('images/portfolio/hook/hook-thumb.jpg') }}');"></div>
       <div class="pane-content">
-        <h3 class="pane-content__title">Juice-E-Vaporium</h3>
+        <h3 class="pane-content__title">Hook &amp; Partners</h3>
         <span class="pane-content__button">View website</span>
       </div>
     </a>

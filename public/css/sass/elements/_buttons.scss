@@ -35,6 +35,19 @@
   &:hover {
     background: lighten($green, 5%);
   }
+
+  .portfolio & {
+    @extend .button--blue;
+  }
+}
+
+.button--blue {
+  background: $blue;
+  color: $white;
+
+  &:hover {
+    background: lighten($blue, 5%);
+  }
 }
 
 .button--space {
@@ -59,5 +72,25 @@
     color: $salmon;
     text-decoration: underline;
     text-decoration-color: rgba($salmon,0.4);
+  }
+}
+
+.link--storm {
+  color: $white;
+  font-size: 16px;
+  font-family: $font;
+
+  text-decoration: underline;
+  text-decoration-color: rgba($white,0.4);
+
+  &:hover {
+    color: $red !important;
+    text-decoration-color: rgba($red,0.4) !important;
+  }
+}
+
+.link--img {
+  &:hover {
+    @include opacity(0.6);
   }
 }

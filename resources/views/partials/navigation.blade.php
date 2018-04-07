@@ -11,11 +11,10 @@
   </div>
   <nav class="navigation-list">
     <ul class="nav">
-      <li><a href="" title="">Welcome</a></li>
-      <li><a href="" title="">Introduction</a></li>
-      <li><a href="" title="">Portfolio</a></li>
-      <li><a href="" title="">Tools</a></li>
-      <li><a href="" title="">Contact</a></li>
+      <li><a href="{{ url('/') }}" title="Welcome">Welcome</a></li>
+      <li><a href="{{ url('/#introduction') }}" title="Introduction">Introduction</a></li>
+      <li><a href="{{ url('/#portfolio') }}" title="Portfolio">Portfolio</a></li>
+      <li><a href="{{ url('/#contact') }}" title="Contact">Contact</a></li>
     </ul>
     <div class="social-wrapper social-wrapper--blue">
       @include ('partials/social')

@@ -11,12 +11,12 @@
 	</head>
 	<body>
     <div class="content-wrapper">
-      @include ('partials.navigation')
-			<main>
-				@yield('content')
-			</main>
-			@include('partials/footer')
-		</div>
+	      @include ('partials.navigation')
+				<main>
+					@yield('content')
+				</main>
+				@include('partials/footer')
+			</div>
 
 		@section('bodyJS')
       @include ('partials.global.js')
