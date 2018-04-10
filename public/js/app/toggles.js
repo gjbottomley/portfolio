@@ -1,8 +1,3 @@
-
-// if( !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
-// 	var s = skrollr.init();
-// }
-
 $('#js-wrapper').on('click', function (e) {
 	var element = $(e.target);
 

@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [
+  'uses' => 'ContactController@show',
+]);
 
-Route::get('/', 'ContactController@show');
-Route::post('/',  'ContactController@mailToAdmin');
+Route::post('/',  [
+  'uses' => 'ContactController@store',
+  'as' => 'home.store'
+]);
 
+Route::get('/cv', 'PageController@cv');
 
 Route::get('/portfolio/hook-and-partners', 'PortfolioController@hook');
 Route::get('/portfolio/seetec', 'PortfolioController@seetec');

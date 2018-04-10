@@ -15,6 +15,7 @@
       <li><a href="{{ url('/#introduction') }}" title="Introduction">Introduction</a></li>
       <li><a href="{{ url('/#portfolio') }}" title="Portfolio">Portfolio</a></li>
       <li><a href="{{ url('/#contact') }}" title="Contact">Contact</a></li>
+      <li><a href="{{ url('/cv') }}" title="CV">My CV</a></li>
     </ul>
     <div class="social-wrapper social-wrapper--blue">
       @include ('partials/social')

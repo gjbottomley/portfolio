@@ -1,6 +1,3 @@
-import $ from 'jquery';
-
-
 $('.tool-slider').slick({
   dots: true,
   infinite: false,

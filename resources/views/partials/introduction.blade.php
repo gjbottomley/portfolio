@@ -6,5 +6,5 @@
     <p>Most recently I have been working at <a href="http://stormcreative.co.uk/" title="Storm Creative" target="_blank" class="link link--storm">Storm Creative</a> as the Lead Frontend Developer, I am incredibly proud of all the work I produced while working there and feel that the experience of working at a high-pressure agency gives me an edge over other developers.</p>
     <p>I am currently looking for work!</p>
   </div>
-  <a href="{{ url('#contact') }}" class="button button--space">Get in touch</a>
+  <a href="{{ url('/cv') }}" class="button button--space">See my CV</a>
 </div>

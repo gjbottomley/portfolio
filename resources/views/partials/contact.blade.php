@@ -17,7 +17,7 @@
   <div class="grid grid--7">
     <div class="tile-wrapper">
       <div class="tile" id="js-form-wrapper">
-        {!! Form::open(['class' => 'form']) !!}
+        <form method="post" action="{{ route('home.store') }}" class="form" id="js-form">
         {{ csrf_field() }}
         <div class="form-group">
             {!! Form::text('name', null, ['class' => 'form__input', 'placeholder' => 'Your Name', 'pattern' => '([A-zÀ-ž\s]){1,}', 'required' => 'required', 'title' => 'Your name cannot contain any numbers or special characters']) !!}
@@ -39,15 +39,14 @@
         </div>
 
         <div class="form-group">
-            {!! Form::textarea('msg', null, ['class' => 'form__input form__input--textarea', 'placeholder' => 'Your Message', 'required' => 'required', 'title' => 'e.g this is an awesome website.']) !!}
-            {!! Form::label('msg', 'Message', ['class' => 'form__label']) !!}
+            {!! Form::textarea('message', null, ['class' => 'form__input form__input--textarea', 'placeholder' => 'Your Message', 'required' => 'required', 'title' => 'e.g this is an awesome website.']) !!}
+            {!! Form::label('message', 'Message', ['class' => 'form__label']) !!}
         </div>
 
         <div class="form-group form-group--submit">
           {!! Form::submit('Submit', ['class' => 'form__submit', 'id' => 'js-form-submit']) !!}
         </div>
-
-        {!! Form::close() !!}
+      </form>
         <div class="form__success hide" id="js-form-success">
           <div class="form__success-inner">
             <img src="{{ url('images/email.jpg') }}" class="content__img content__img--envelope animated fadeInLeft" width="198" height="79" alt="Email Sent!">

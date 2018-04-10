@@ -209,6 +209,15 @@
 		@include opacity(0.3);
 	}
 }
+.content__img--portfolio-d {
+	position: absolute;
+	bottom: -60px;
+	left: -60px;
+
+	@media all and(max-width:845px) {
+		@include opacity(0.3);
+	}
+}
 
 .content__img--envelope {
 	margin-left: -80px;

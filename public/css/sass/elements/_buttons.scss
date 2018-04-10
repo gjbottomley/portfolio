@@ -55,6 +55,12 @@
 }
 
 
+.button--no-print {
+  @media print {
+    display: none;
+  }
+}
+
 .link {
   display: inline-block;
   color: $white;

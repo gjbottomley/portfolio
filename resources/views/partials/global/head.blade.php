@@ -1,5 +1,5 @@
 <title>George Bottomley - Web Developer in Queenstown New Zealand</title>
-<meta name="description" content="">
+<meta name="description" content="Frontend Web Developer In Queens Town, New Zealand">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE8=;IE=9;IE=10;IE=Edge"/>
 <!-- View -->
