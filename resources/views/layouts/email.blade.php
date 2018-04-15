@@ -106,7 +106,7 @@
                 <tr>
                   <td align="center">
                     <a href="http://george-bottomley.co.nz/" title="Revisit my website">
-                      <img src="http://george-bottomley.co.nz/assets/images/GB-Logo.png" width="120" height="70" alt="GB">
+                      <img src="http://george-bottomley.co.nz/gb-logo.png" width="120" height="70" alt="GB">
                     </a>
                   </td>
               </table>

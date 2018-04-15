@@ -1,3 +1,4 @@
+
 $('#js-wrapper').on('click', function (e) {
 	var element = $(e.target);
 
@@ -59,7 +60,6 @@ var LoadMore = function (element) {
 
 	setTimeout(function(){
 		$('#js-' + area).addClass('visible');
-		s.refresh();
 	}, 700);
 }
 

@@ -20,6 +20,9 @@ Route::post('/',  [
   'as' => 'home.store'
 ]);
 
+//Route::post('send-mail', 'MailController@sendMail')->name('mail');
+
+
 Route::get('/cv', 'PageController@cv');
 
 Route::get('/portfolio/hook-and-partners', 'PortfolioController@hook');

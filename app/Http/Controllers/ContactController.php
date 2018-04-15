@@ -42,6 +42,6 @@ Class ContactController extends Controller
 
 			$mail->to($request->email)->subject('Thank Your for your Enquiry');
 		});
-		return redirect()->back();
+		//return redirect()->back();
 	}
 }
