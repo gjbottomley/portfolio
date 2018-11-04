@@ -4,13 +4,8 @@
     <div class="content content--header content--center">
       <div class="content-wrap animated fadeInUp">
         <div class="gif-wrapper">
-          <img src="{{ url('images/GB-Logo.gif') }}" width="188" height="102" alt="GB" class="content__img" id="js-logo">
+          <img src="{{ url('images/null.png') }}" width="150" height="150" alt="GB" class="content__img" id="js-logo">
         </div>
-        <h1 class="content__title content__title--main">
-          <span class="job__title">Web Developer</span>
-          <br>
-          <span class="location">In Queenstown, New&nbsp;Zealand</span>
-        </h1>
       </div>
     </div>
     <div class="layer layer--five" data-0="top:80px;" data-600="top: 400px;"></div>

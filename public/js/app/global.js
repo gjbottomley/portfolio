@@ -39,11 +39,10 @@ $( document ).ready(function() {
   });
 
   // Logo Gif intervals
-  var path = '/images/GB-Logo.gif';
-  $("#js-logo").attr("src", path);
-  window.setInterval(function(){
+  var path = '/images/gb.gif';
+  setTimeout(function(){
     $("#js-logo").attr("src", path);
-  }, 15000);
+  }, 900);
 
   // On Load
   setTimeout(function(){
@@ -63,7 +62,7 @@ $("#js-form").submit(function(e) {
 
   formWrapper.css('height', formHeight);
   element.addClass('loading');
-  
+
   $.ajax({
     type: "POST",
     url: url,
